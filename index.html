@@ -6,118 +6,219 @@
     <title>Eurotrip 2026</title>
     <style>
         :root {
-            --bg-color: #f8f9fa;
+            --bg-color: #fcfcfc;
             --card-bg: #ffffff;
-            --text-main: #212529;
-            --text-muted: #6c757d;
-            --border-color: #e9ecef;
+            --text-main: #1a1a1a;
+            --text-muted: #6e6e73;
+            --border-color: #e5e5ea;
+            --accent-color: #0071e3;
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.5;
+            line-height: 1.45;
             margin: 0;
-            padding: 20px;
+            padding: 16px;
         }
         .container {
-            max-width: 500px;
+            max-width: 480px;
             margin: 0 auto;
+            padding-bottom: 40px;
         }
-        h1 { font-size: 1.8rem; margin-bottom: 5px; }
-        .subtitle { color: var(--text-muted); margin-bottom: 25px; font-size: 0.95rem; }
+        .header-section {
+            margin-bottom: 24px;
+        }
+        h1 { font-size: 1.65rem; font-weight: 700; margin: 0 0 4px 0; letter-spacing: -0.5px; }
+        .subtitle { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px; }
         
-        /* Estadísticas superiores */
+        /* Resumen Rápido */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            margin-bottom: 30px;
+            gap: 8px;
+            margin-bottom: 24px;
         }
         .stat-card {
             background: var(--card-bg);
-            padding: 15px;
+            padding: 12px;
             border-radius: 12px;
             border: 1px solid var(--border-color);
-            text-align: center;
         }
-        .stat-val { font-weight: bold; font-size: 1.1rem; color: #212529; }
-        .stat-lbl { color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; margin-top: 4px; }
+        .stat-val { font-weight: 600; font-size: 1.05rem; }
+        .stat-lbl { color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; margin-top: 2px; }
 
         /* Tarjetas de Itinerario */
+        h2 { font-size: 1.1rem; font-weight: 600; margin: 24px 0 12px 0; color: var(--text-main); border-bottom: 1px solid var(--border-color); padding-bottom: 6px; }
         .day-card {
             background: var(--card-bg);
-            border-radius: 16px;
+            border-radius: 14px;
             border: 1px solid var(--border-color);
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+            padding: 16px;
+            margin-bottom: 12px;
         }
         .day-header {
             display: flex;
             justify-content: space-between;
             color: var(--text-muted);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
-        .day-title { font-size: 1.25rem; font-weight: 700; margin: 0 0 10px 0; }
-        .day-details { color: #495057; font-size: 0.9rem; margin-bottom: 15px; }
+        .day-title { font-size: 1.15rem; font-weight: 700; margin: 0 0 8px 0; }
+        .day-details { color: #333333; font-size: 0.88rem; margin-bottom: 12px; }
         
-        /* Logística al pie de tarjeta */
+        /* Listas de Panoramas */
+        .panoramas-title { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); margin-bottom: 4px; }
+        .panoramas-list { margin: 0 0 12px 0; padding-left: 18px; font-size: 0.85rem; color: #444; }
+        .panoramas-list li { margin-bottom: 2px; }
+
+        /* Logística */
         .day-meta {
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 4px;
             border-top: 1px solid var(--border-color);
-            padding-top: 12px;
-            font-size: 0.85rem;
+            padding-top: 10px;
+            font-size: 0.82rem;
             color: var(--text-muted);
         }
-        .meta-item { display: flex; align-items: center; gap: 6px; }
+        .meta-link { color: var(--accent-color); text-decoration: none; }
+        
+        /* Tabla de Presupuesto */
+        .budget-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+            font-size: 0.88rem;
+        }
+        .budget-table th, .budget-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .budget-table th { font-weight: 600; color: var(--text-muted); }
+        .text-right { text-align: right; }
+        .total-row { font-weight: 700; background-color: #f2f2f7; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>🇨🇿 Eurotrip 2026 🇦🇹</h1>
-    <div class="subtitle">Agosto 2026 · 4 personas · Ruta Grupal</div>
+    <div class="header-section">
+        <h1>🇪🇺 Eurotrip con Amigos</h1>
+        <div class="subtitle">7 - 27 Agosto 2026 · 4 personas · 20 noches</div>
+    </div>
 
     <div class="stats-grid">
-        <div class="stat-card"><div class="stat-val">Praga ➔ Innsbruck</div><div class="stat-lbl">Ruta Principal</div></div>
-        <div class="stat-card"><div class="stat-val">Tren Nocturno</div><div class="stat-lbl">Logística Clave</div></div>
+        <div class="stat-card"><div class="stat-val">5 Países / Zonas</div><div class="stat-lbl">Ruta completa</div></div>
+        <div class="stat-card"><div class="stat-val">~2.2M CLP</div><div class="stat-lbl">Alojamiento Total PP</div></div>
     </div>
 
+    <h2>🇨🇿 Praga (República Checa)</h2>
     <div class="day-card">
-        <div class="day-header"><span>Día 1 · Inicio</span> <span>Dom 9 Ago</span></div>
-        <div class="day-title">Explorando Praga</div>
-        <div class="day-details">Recorrido por el centro histórico, la Plaza de la Ciudad Vieja y el Puente de Carlos. Cena grupal de bienvenida.</div>
+        <div class="day-header"><span>7 - 10 Ago · 3 noches</span> <span>Praga</span></div>
+        <div class="day-title">Centro Histórico y Tabernas</div>
+        <div class="day-details">Llegada en avión desde Madrid. Hospedaje céntrico y días dedicados a explorar la arquitectura medieval y disfrutar de la gastronomía checa. Datos clave: Los supermercados más baratos están en las estaciones de metro. Usar Wise para pagar.</div>
+        
+        <div class="panoramas-title">📍 Panoramas destacados:</div>
+        <ul class="panoramas-list">
+            <li>Reloj Astronómico y la Cabeza de Kafka</li>
+            <li>Cruzar el Puente de Carlos y subir al Castillo de Praga</li>
+            <li>Muro de John Lennon y la Biblioteca Municipal</li>
+            <li>Cenar en una Taberna Medieval y probar el Halusky en la plaza</li>
+        </ul>
+
         <div class="day-meta">
-            <div class="meta-item">🛏️ Alojamiento en Praga</div>
-            <div class="meta-item">🚶‍♂️ Recorrido a pie</div>
+            <span>🏠 <a class="meta-link" href="https://www.airbnb.cl/rooms/45117021" target="_blank">Airbnb Praga</a> (~$109.816 pp)</span>
+            <span>✈️ Vuelo Madrid-Praga</span>
         </div>
     </div>
 
+    <h2>🇦🇹 Innsbruck (Austria)</h2>
     <div class="day-card">
-        <div class="day-header"><span>Día 2 · Trayecto</span> <span>Lun 10 Ago</span></div>
-        <div class="day-title">Praga & Tren Nocturno</div>
-        <div class="day-details">Últimas visitas en Praga durante el día. Por la tarde/noche, traslado a la estación para abordar el tren nocturno rumbo a Austria. Noche a bordo en compartimento couchette reservado para 4 personas.</div>
+        <div class="day-header"><span>10 - 15 Ago · 5 noches</span> <span>Innsbruck</span></div>
+        <div class="day-title">Alpes y Escalada</div>
+        <div class="day-details">Traslado hacia Austria. Días de base alpina enfocados puramente en aventura, naturaleza y escalada en roca. Requiere arriendo de auto para moverse por los valles.</div>
+        
+        <div class="panoramas-title">📍 Actividades y Spots:</div>
+        <ul class="panoramas-list">
+            <li>Aventura en Vía Ferrata Innsbruck</li>
+            <li>Escalada en roca en Höttinger Steinbruch</li>
+            <li>Visita al Kletterzentrum Innsbruck (Gym KI)</li>
+            <li>Explorar los sectores de Ehnbachklamm</li>
+        </ul>
+
         <div class="day-meta">
-            <div class="meta-item">🚂 Tren nocturno (Praga - Innsbruck)</div>
-            <div class="meta-item">🌙 Litera / Couchette 4p</div>
+            <span>🏠 <a class="meta-link" href="https://www.airbnb.cl/rooms/34355140" target="_blank">Airbnb Innsbruck</a> (~$314.671 pp)</span>
+            <span>🚗 Auto rentado para la sección alpina</span>
         </div>
     </div>
 
+    <h2>🇮🇹 Dolomitas (Italia)</h2>
     <div class="day-card">
-        <div class="day-header"><span>Día 3 · Llegada</span> <span>Mar 11 Ago</span></div>
-        <div class="day-title">Innsbruck & Glamping</div>
-        <div class="day-details">Llegada temprano en tren a Innsbruck. Desayuno en la ciudad y check-in en el alojamiento de glamping en los alrededores alpino. Tarde de desconexión y naturaleza.</div>
+        <div class="day-header"><span>15 - 21 Ago · 6 noches</span> <span>Cortina d'Ampezzo</span></div>
+        <div class="day-title">Montañas y Senderismo Técnico</div>
+        <div class="day-details">Manejo cruzando la frontera hacia los impresionantes macizos italianos de Cortina d'Ampezzo. Días intensos de montaña y paisajes verticales.</div>
+        
+        <div class="panoramas-title">📍 Panoramas destacados:</div>
+        <ul class="panoramas-list">
+            <li>Vía Ferrata De Luca / Innerkofler</li>
+            <li>Ruta técnica y refugio Pisciadù</li>
+            <li>Rutas escénicas en auto por los pasos de montaña</li>
+        </ul>
+
         <div class="day-meta">
-            <div class="meta-item">🛏️ Glamping Innsbruck (4 personas)</div>
-            <div class="meta-item">⛰️ Entorno alpino</div>
+            <span>🏠 <a class="meta-link" href="https://www.airbnb.cl/rooms/1224697891924672546" target="_blank">Airbnb Cortina</a> (~$595.276 pp)</span>
         </div>
     </div>
 
+    <h2>🇮🇹 Verona (Italia)</h2>
+    <div class="day-card">
+        <div class="day-header"><span>21 - 23 Ago · 2 noches</span> <span>Verona</span></div>
+        <div class="day-title">Cultura Romana y Descanso</div>
+        <div class="day-details">Devolución del auto de alquiler del tramo alpino. Fin de semana de descanso urbano en la romántica Verona antes de conectar hacia el este.</div>
+
+        <div class="day-meta">
+            <span>🏠 <a class="meta-link" href="https://www.airbnb.cl/rooms/41494890" target="_blank">Airbnb Verona</a> (~$99.847 pp)</span>
+            <span>🚂 Tren Verona - Villach para conectar a Eslovenia</span>
+        </div>
+    </div>
+
+    <h2>🇸🇮 Bled (Eslovenia)</h2>
+    <div class="day-card">
+        <div class="day-header"><span>23 - 27 Ago · 4 noches</span> <span>Bled</span></div>
+        <div class="day-title">Lagos y Naturaleza Eslovena</div>
+        <div class="day-details">Estadía mágica junto al icónico lago Bled. Últimas noches del viaje grupal rodeados de castillos y paseos lacustres antes del vuelo de salida.</div>
+
+        <div class="day-meta">
+            <span>🏠 <a class="meta-link" href="https://www.airbnb.cl/rooms/647677873538639046" target="_blank">Airbnb Lago Bled</a> (~$413.437 pp)</span>
+            <span>✈️ Vuelo de salida desde Ljubljana hacia Sicilia</span>
+        </div>
+    </div>
+
+    <h2>💰 Resumen Alojamientos (Por Persona)</h2>
+    <table class="budget-table">
+        <thead>
+            <tr>
+                <th>Destino</th>
+                <th>Noches</th>
+                <th class="text-right">Valor PP (CLP)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Praga</td><td>3</td><td class="text-right">$109.816</td></tr>
+            <tr><td>Innsbruck</td><td>5</td><td class="text-right">$314.671</td></tr>
+            <tr><td>Dolomitas</td><td>6</td><td class="text-right">$595.276</td></tr>
+            <tr><td>Verona</td><td>2</td><td class="text-right">$99.847</td></tr>
+            <tr><td>Bled</td><td>4</td><td class="text-right">$413.437</td></tr>
+            <tr class="total-row">
+                <td>Total Est. Hospedaje</td>
+                <td>20 noches</td>
+                <td class="text-right">$1.533.047</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
 </body>
