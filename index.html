@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eurotrip 2026</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #212529;
+            --text-muted: #6c757d;
+            --border-color: #e9ecef;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.5;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        h1 { font-size: 1.8rem; margin-bottom: 5px; }
+        .subtitle { color: var(--text-muted); margin-bottom: 25px; font-size: 0.95rem; }
+        
+        /* Estadísticas superiores */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+        .stat-val { font-weight: bold; font-size: 1.1rem; color: #212529; }
+        .stat-lbl { color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; margin-top: 4px; }
+
+        /* Tarjetas de Itinerario */
+        .day-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+        }
+        .day-header {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .day-title { font-size: 1.25rem; font-weight: 700; margin: 0 0 10px 0; }
+        .day-details { color: #495057; font-size: 0.9rem; margin-bottom: 15px; }
+        
+        /* Logística al pie de tarjeta */
+        .day-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 12px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        .meta-item { display: flex; align-items: center; gap: 6px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🇨🇿 Eurotrip 2026 🇦🇹</h1>
+    <div class="subtitle">Agosto 2026 · 4 personas · Ruta Grupal</div>
+
+    <div class="stats-grid">
+        <div class="stat-card"><div class="stat-val">Praga ➔ Innsbruck</div><div class="stat-lbl">Ruta Principal</div></div>
+        <div class="stat-card"><div class="stat-val">Tren Nocturno</div><div class="stat-lbl">Logística Clave</div></div>
+    </div>
+
+    <div class="day-card">
+        <div class="day-header"><span>Día 1 · Inicio</span> <span>Dom 9 Ago</span></div>
+        <div class="day-title">Explorando Praga</div>
+        <div class="day-details">Recorrido por el centro histórico, la Plaza de la Ciudad Vieja y el Puente de Carlos. Cena grupal de bienvenida.</div>
+        <div class="day-meta">
+            <div class="meta-item">🛏️ Alojamiento en Praga</div>
+            <div class="meta-item">🚶‍♂️ Recorrido a pie</div>
+        </div>
+    </div>
+
+    <div class="day-card">
+        <div class="day-header"><span>Día 2 · Trayecto</span> <span>Lun 10 Ago</span></div>
+        <div class="day-title">Praga & Tren Nocturno</div>
+        <div class="day-details">Últimas visitas en Praga durante el día. Por la tarde/noche, traslado a la estación para abordar el tren nocturno rumbo a Austria. Noche a bordo en compartimento couchette reservado para 4 personas.</div>
+        <div class="day-meta">
+            <div class="meta-item">🚂 Tren nocturno (Praga - Innsbruck)</div>
+            <div class="meta-item">🌙 Litera / Couchette 4p</div>
+        </div>
+    </div>
+
+    <div class="day-card">
+        <div class="day-header"><span>Día 3 · Llegada</span> <span>Mar 11 Ago</span></div>
+        <div class="day-title">Innsbruck & Glamping</div>
+        <div class="day-details">Llegada temprano en tren a Innsbruck. Desayuno en la ciudad y check-in en el alojamiento de glamping en los alrededores alpino. Tarde de desconexión y naturaleza.</div>
+        <div class="day-meta">
+            <div class="meta-item">🛏️ Glamping Innsbruck (4 personas)</div>
+            <div class="meta-item">⛰️ Entorno alpino</div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
